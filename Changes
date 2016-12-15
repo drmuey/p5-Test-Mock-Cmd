@@ -1,6 +1,6 @@
 Revision history for Test-Mock-Cmd
 
-0.7  ???
+0.7  Thu Dec 15 10:18:13 2016
     - rt119171: (Thanks Frank Bicknel!) fix qr/qx confusion
     - Change rt to github
 
