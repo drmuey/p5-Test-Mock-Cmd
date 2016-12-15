@@ -266,13 +266,10 @@ None.
 
 None reported.
 
-=head1 BUGS AND LIMITATIONS
+=head1 BUGS AND FEATURES
 
-No bugs have been reported.
-
-Please report any bugs or feature requests to
-C<bug-test-mock-cmd@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.
+Please report any bugs or feature requests (and a pull request for bonus points)
+ through the issue tracker at L<https://github.com/drmuey/p5-Test-Mock-Cmd/issues>.
 
 =head1 See Also
 

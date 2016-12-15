@@ -2,6 +2,7 @@ Revision history for Test-Mock-Cmd
 
 0.7  ???
     - rt119171: (Thanks Frank Bicknel!) fix qr/qx confusion
+    - Change rt to github
 
 0.6  Fri May 3 10:42:53 2013
     - rt 84976: Add .t example
