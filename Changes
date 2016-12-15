@@ -1,5 +1,8 @@
 Revision history for Test-Mock-Cmd
 
+0.7  ???
+    - rt119171: (Thanks Frank Bicknel!) fix qr/qx confusion
+
 0.6  Fri May 3 10:42:53 2013
     - rt 84976: Add .t example
     - rt 84975: (Thanks for the idea SCHWERN!) add selective-mocking-factory-hash support
