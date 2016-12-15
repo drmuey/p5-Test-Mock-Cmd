@@ -7,30 +7,30 @@ use Test::Carp;
 BEGIN {
     use_ok( 'Test::Mock::Cmd', sub { 1 } );
     use_ok( 'Test::Mock::Cmd', sub { 1 }, sub { 2 }, sub { 3 } );
-    use_ok( 'Test::Mock::Cmd', 'system' => sub { 1 }, 'exec' => sub { 2 }, 'qr' => sub { 3 } );
+    use_ok( 'Test::Mock::Cmd', 'system' => sub { 1 }, 'exec' => sub { 2 }, 'qx' => sub { 3 } );
 
     use_ok( 'Test::Mock::Cmd', {} );
     use_ok( 'Test::Mock::Cmd', {}, {}, {} );
-    use_ok( 'Test::Mock::Cmd', 'system' => {}, 'exec' => {}, 'qr' => {} );
+    use_ok( 'Test::Mock::Cmd', 'system' => {}, 'exec' => {}, 'qx' => {} );
 
     # basic permutations of mixed args, no need to go crazy eh?
     use_ok( 'Test::Mock::Cmd', sub { 1 }, {}, {} );
-    use_ok( 'Test::Mock::Cmd', 'system' => sub { 1 }, 'exec' => {}, 'qr' => {} );
+    use_ok( 'Test::Mock::Cmd', 'system' => sub { 1 }, 'exec' => {}, 'qx' => {} );
 
     use_ok( 'Test::Mock::Cmd', {}, sub { 2 }, {} );
-    use_ok( 'Test::Mock::Cmd', 'system' => {}, 'exec' => sub { 2 }, 'qr' => {} );
+    use_ok( 'Test::Mock::Cmd', 'system' => {}, 'exec' => sub { 2 }, 'qx' => {} );
 
     use_ok( 'Test::Mock::Cmd', {}, {}, sub { 3 } );
-    use_ok( 'Test::Mock::Cmd', 'system' => {}, 'exec' => {}, 'qr' => sub { 3 } );
+    use_ok( 'Test::Mock::Cmd', 'system' => {}, 'exec' => {}, 'qx' => sub { 3 } );
 
     use_ok( 'Test::Mock::Cmd', {}, sub { 2 }, sub { 3 } );
-    use_ok( 'Test::Mock::Cmd', 'system' => {}, 'exec' => sub { 2 }, 'qr' => sub { 3 } );
+    use_ok( 'Test::Mock::Cmd', 'system' => {}, 'exec' => sub { 2 }, 'qx' => sub { 3 } );
 
     use_ok( 'Test::Mock::Cmd', sub { 1 }, {}, sub { 3 } );
-    use_ok( 'Test::Mock::Cmd', 'system' => sub { 1 }, 'exec' => {}, 'qr' => sub { 3 } );
+    use_ok( 'Test::Mock::Cmd', 'system' => sub { 1 }, 'exec' => {}, 'qx' => sub { 3 } );
 
     use_ok( 'Test::Mock::Cmd', sub { 1 }, sub { 2 }, {} );
-    use_ok( 'Test::Mock::Cmd', 'system' => sub { 1 }, 'exec' => sub { 2 }, 'qr' => {} );
+    use_ok( 'Test::Mock::Cmd', 'system' => sub { 1 }, 'exec' => sub { 2 }, 'qx' => {} );
 }
 
 diag("Testing Test::Mock::Cmd $Test::Mock::Cmd::VERSION");
@@ -38,7 +38,7 @@ diag("Testing Test::Mock::Cmd $Test::Mock::Cmd::VERSION");
 my $import     = sub { require Test::Mock::Cmd; Test::Mock::Cmd->import(@_) };
 my $arg_regex  = qr/import\(\) requires a 1-3 key hash, 1 code\/hash reference, or 3 code\/hash references as arguments/;
 my $code_regex = qr/Not a CODE or HASH reference/;
-my $key_regex  = qr/Key is not system\, exec\, or qr/;
+my $key_regex  = qr/Key is not system\, exec\, or qx/;
 
 does_croak_that_matches( $import, $arg_regex );
 does_croak_that_matches( $import, sub { 1 }, sub { 2 }, $key_regex );
