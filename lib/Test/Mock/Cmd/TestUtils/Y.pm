@@ -27,6 +27,10 @@ sub i_call_backticks {
 
 __END__
 
+=head1 NAME
+
+Test::Mock::Cmd::TestUtils::Y - Provide subs for test suite (Y.pm)
+
 =head1 LICENCE AND COPYRIGHT
 
 Copyright (c) 2011 cPanel, Inc. C<< <copyright@cpanel.net>> >>. All rights reserved.

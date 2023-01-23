@@ -61,6 +61,10 @@ sub tmp_stdout_like_rt_72976 {
 
 __END__
 
+=head1 NAME
+
+Test::Mock::Cmd - Add additional subs for test suite
+
 =head1 LICENCE AND COPYRIGHT
 
 Copyright (c) 2011 cPanel, Inc. C<< <copyright@cpanel.net>> >>. All rights reserved.
